@@ -6,13 +6,6 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react"
   },
-  "include": [
-    "src//*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    ".eslintcache"
-  ]
+  "include": ["src//*"],
+  "exclude": ["node_modules", "build", "dist", ".eslintcache"]
 }

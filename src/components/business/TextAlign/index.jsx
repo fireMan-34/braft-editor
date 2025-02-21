@@ -50,6 +50,7 @@ class TextAlign extends React.Component {
       <ControlGroup>
         {this.props.textAligns.map((item, index) => (
           <button
+            aria-label='align'
             type="button"
             key={uuidv4()}
             data-title={textAlignmentTitles[index]}

@@ -195,6 +195,7 @@ class Modal extends React.Component {
             <h3 className="bf-modal-caption">{title}</h3>
             {showClose && (
               <button
+                aria-label='close'
                 type="button"
                 onClick={this.close}
                 className="bf-modal-close-button"

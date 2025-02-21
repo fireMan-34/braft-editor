@@ -42,6 +42,7 @@ class TextIndent extends React.Component {
       <ControlGroup>
         <button
           key={0}
+          aria-label='increase Indent'
           type="button"
           data-title={language.controls.increaseIndent}
           disabled={currentIndent >= 6}
@@ -54,6 +55,7 @@ class TextIndent extends React.Component {
         </button>
         <button
           key={1}
+          aria-label='decrease Indent'
           type="button"
           data-title={language.controls.decreaseIndent}
           disabled={currentIndent <= 0}

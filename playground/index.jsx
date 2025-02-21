@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // import Emoticon, { defaultEmoticons } from 'braft-extensions/dist/emoticon';
 
 // import BraftEditor from '../src_old';
-import BraftEditor from '../dist_old/index';
+import BraftEditor from '../src/index';
 
 import 'braft-extensions/dist/emoticon.css';
 import 'braft-extensions/dist/color-picker.css';
@@ -70,9 +70,10 @@ class App extends React.Component {
         <div className="demo" id="demo">
           11111
           <BraftEditor
+            value={BraftEditor.createEditorState('')}
             // colors={['#e25041']}
             // headings={['header-one', 'unstyled']}
-            placeholder="Hello World!"
+            // placeholder="Hello World!"
             // fixPlaceholder
             // allowInsertLinkText
             // triggerChangeOnMount={false}

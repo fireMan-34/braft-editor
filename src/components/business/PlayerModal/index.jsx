@@ -35,10 +35,15 @@ const PlayerModal = ({
         <i className={typeIconsMap[type]} />
         <span className="text">{language.media[type]}</span>
       </div>
-      <button onMouseDown={onRemove} className="button-remove">
+      <button
+        aria-label="remove"
+        onMouseDown={onRemove}
+        className="button-remove"
+      >
         <i className="bfi-close" />
       </button>
       <button
+        aria-label="play"
         onMouseDown={() =>
           playViaModal(name ? `${title}:${name}` : title, children, language)
         }

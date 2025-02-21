@@ -213,6 +213,7 @@ class LinkEditor extends React.Component {
           </div>
         </DropDown>
         <button
+          aria-label='unlink'
           key={1}
           type="button"
           data-title={this.props.language.controls.unlink}
