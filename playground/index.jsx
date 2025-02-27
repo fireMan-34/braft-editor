@@ -70,7 +70,7 @@ class App extends React.Component {
         <div className="demo" id="demo">
           11111
           <BraftEditor
-            value={BraftEditor.createEditorState('')}
+            // value={BraftEditor.createEditorState('')}
             // colors={['#e25041']}
             // headings={['header-one', 'unstyled']}
             // placeholder="Hello World!"

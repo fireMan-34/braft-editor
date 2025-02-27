@@ -4,7 +4,10 @@
     "target": "es6",
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "sass/*": ["./src/assets/scss/*"]
+    }
   },
   "include": ["src//*"],
   "exclude": ["node_modules", "build", "dist", ".eslintcache"]

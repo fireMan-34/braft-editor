@@ -11,5 +11,39 @@
     "**/node_modules": true
   },
   "editor.tabSize": 2,
-  "eslint.enable": true
+  "eslint.enable": true,
+  "javascript.suggest.paths": true,
+  "somesass.sass.links.enabled": true,
+  "somesass.scss.completion.suggestFromUseOnly": true,
+  "somesass.sass.completion.suggestFromUseOnly": true,
+  "somesass.sass.completion.enabled": true,
+  "somesass.scss.colors.includeFromCurrentDocument": true,
+  "somesass.scss.completion.css": true,
+  "somesass.scss.completion.includeFromCurrentDocument": true,
+  "somesass.scss.links.enabled": true,
+  "path-autocomplete.pathMappings": {
+    "~scss/": "${workspace}/src/assets/scss/"
+  },
+  "path-autocomplete.transformations": [
+    {
+      "type": "replace",
+      "parameters": [
+        "^_",
+        ""
+      ],
+      "when": {
+        "fileName": "\\.scss$"
+      }
+    },
+    {
+      "type": "replace",
+      "parameters": [
+        "\\.scss$",
+        ""
+      ],
+      "when": {
+        "fileName": "\\.scss$"
+      }
+    },
+  ],
 }

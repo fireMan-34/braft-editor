@@ -56,6 +56,7 @@ module.exports = {
     mainFields: ['browser', 'jsnext:main', 'main'],
     alias: {
       scssinc: path.join(__dirname, '../../src/assets/scss/_inc.scss'),
+      'scss': path.join(__dirname, '../../src/assets/scss/'),
     },
     extensions: ['.js', '.jsx'],
   },

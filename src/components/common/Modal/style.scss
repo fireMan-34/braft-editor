@@ -1,4 +1,5 @@
-@import '~scssinc';
+@use 'sass:color';
+@use '~scss/config' as *;
 
 .bf-modal{
   position: fixed;
@@ -99,7 +100,7 @@
   background-color: $COLOR_ACTIVE;
   color: #fff;
   &:hover{
-    background-color: $COLOR_ACTIVE - 20;
+    background-color: color.adjust($COLOR_ACTIVE, $lightness: -10%);
   }
   &.disabled{
     opacity: .3;

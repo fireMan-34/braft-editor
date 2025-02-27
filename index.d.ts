@@ -26,17 +26,17 @@ export interface BraftEditorProps {
   editorId?: string,
   readOnly?: boolean;
   language?:
-    | 'zh'
-    | 'zh-hant'
-    | 'en'
-    | 'tr'
-    | 'ru'
-    | 'jpn'
-    | 'kr'
-    | 'pl'
-    | 'fr'
-    | 'vi-vn'
-    | ((languages: any, context: any) => any);
+  | 'zh'
+  | 'zh-hant'
+  | 'en'
+  | 'tr'
+  | 'ru'
+  | 'jpn'
+  | 'kr'
+  | 'pl'
+  | 'fr'
+  | 'vi-vn'
+  | ((languages: any, context: any) => any);
   controls?: ControlType[];
   excludeControls?: BuiltInControlType[];
   extendControls?: ExtendControlType[];
@@ -103,10 +103,10 @@ export default class BraftEditor extends React.Component<BraftEditorProps> {
 export type ControlType =
   | BuiltInControlType
   | {
-  key: BuiltInControlType;
-  title?: string;
-  text?: string | React.ReactNode;
-}
+    key: BuiltInControlType;
+    title?: string;
+    text?: string | React.ReactNode;
+  }
   | ExtendControlType;
 
 export type BuiltInControlType =
@@ -143,66 +143,66 @@ export type BuiltInControlType =
 export type ExtendControlType =
   'separator'
   | {
-  key: string;
-  type: 'button';
-  title?: string;
-  className?: string;
-  html?: string | null;
-  text?: string | React.ReactNode;
-  onClick?: Function;
-  disabled?: boolean;
-}
-  | {
-  key: string;
-  type: 'dropdown';
-  title?: string;
-  className?: string;
-  html?: string | null;
-  text?: string | React.ReactNode;
-  showArrow?: boolean;
-  arrowActive?: boolean;
-  autoHide?: boolean;
-  component: React.ReactNode;
-  disabled?: boolean;
-}
-  | {
-  key: string;
-  type: 'modal';
-  title?: string;
-  className?: string;
-  html?: string | null;
-  text?: string | React.ReactNode;
-  onClick?: Function;
-  disabled?: boolean;
-  modal: {
-    id: string;
+    key: string;
+    type: 'button';
     title?: string;
     className?: string;
-    width?: number;
-    height?: number;
-    showFooter?: boolean;
-    showCancel?: boolean;
-    showConfirm?: boolean;
-    confirmable?: boolean;
-    showClose?: boolean;
-    closeOnBlur?: boolean;
-    closeOnConfirm?: boolean;
-    closeOnCancel?: boolean;
-    cancelText?: string;
-    confirmText?: string;
-    bottomText?: React.ReactNode;
-    onConfirm?: Function;
-    onCancel?: Function;
-    onClose?: Function;
-    onBlur?: Function;
-    children: React.ReactNode;
-  };
-}
+    html?: string | null;
+    text?: string | React.ReactNode;
+    onClick?: Function;
+    disabled?: boolean;
+  }
   | {
-  key: string;
-  type: 'component';
-  component: React.ReactNode;
-};
+    key: string;
+    type: 'dropdown';
+    title?: string;
+    className?: string;
+    html?: string | null;
+    text?: string | React.ReactNode;
+    showArrow?: boolean;
+    arrowActive?: boolean;
+    autoHide?: boolean;
+    component: React.ReactNode;
+    disabled?: boolean;
+  }
+  | {
+    key: string;
+    type: 'modal';
+    title?: string;
+    className?: string;
+    html?: string | null;
+    text?: string | React.ReactNode;
+    onClick?: Function;
+    disabled?: boolean;
+    modal: {
+      id: string;
+      title?: string;
+      className?: string;
+      width?: number;
+      height?: number;
+      showFooter?: boolean;
+      showCancel?: boolean;
+      showConfirm?: boolean;
+      confirmable?: boolean;
+      showClose?: boolean;
+      closeOnBlur?: boolean;
+      closeOnConfirm?: boolean;
+      closeOnCancel?: boolean;
+      cancelText?: string;
+      confirmText?: string;
+      bottomText?: React.ReactNode;
+      onConfirm?: Function;
+      onCancel?: Function;
+      onClose?: Function;
+      onBlur?: Function;
+      children: React.ReactNode;
+    };
+  }
+  | {
+    key: string;
+    type: 'component';
+    component: React.ReactNode;
+  };
 
 export type MediaType = {
   items?: any[],
@@ -259,10 +259,10 @@ export type ImageControlType =
   | 'size'
   | 'remove'
   | {
-  text?: string;
-  render?: (mediaData: any) => void;
-  onClick?: (block: any) => void;
-};
+    text?: string;
+    render?: (mediaData: any) => void;
+    onClick?: (block: any) => void;
+  };
 
 export type HooksType = {
   ['toggle-link']?: HookFunc,
@@ -311,3 +311,9 @@ export type HookType =
   | 'remove-medias'
   | 'insert-medias'
   | 'select-files';
+
+declare module '*.scss' {
+  const content: { [key: string]: any }
+  export = content
+}
+declare module'*.scss';

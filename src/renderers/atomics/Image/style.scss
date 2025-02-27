@@ -1,4 +1,6 @@
-@import '~scssinc';
+@use 'sass:color';
+@use '~scss/config' as *;
+
 .bf-image-size-editor,
 .bf-image-link-editor{
   padding-bottom: 1px;
@@ -44,13 +46,13 @@
     border-radius: 2px;
     cursor: pointer;
     &:hover{
-      background-color: $COLOR_ACTIVE - 20;
+      background-color: color.adjust($COLOR_ACTIVE, $lightness: -10%);
     }
   }
 }
 .bf-image-size-editor{
   input{
-    width: 80px;      
+    width: 80px;
   }
 }
 .bf-image-link-editor{
@@ -68,7 +70,7 @@
       margin-left: 15px;
       color: #999;
       font-size: 12px;
-      line-height: 16px;      
+      line-height: 16px;
     }
   }
 }
