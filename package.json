@@ -94,5 +94,6 @@
     "prop-types": "^15.7.2",
     "react-color": "^2.14.1",
     "uuid": "^7.0.2"
-  }
+  },
+  "resolutions": { "braft-convert/draft-js": "^0.11.5" }
 }
