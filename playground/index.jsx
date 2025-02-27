@@ -45,7 +45,7 @@ class App extends React.Component {
 
     this.state = {
       // readOnly: false,
-      // editorState: BraftEditor.createEditorState(),
+      editorState: BraftEditor.createEditorState(),
     };
   }
 
@@ -53,6 +53,14 @@ class App extends React.Component {
     console.log('change');
     this.setState({ editorState });
   };
+
+  save() {
+    const html = this.state.editorState.toHTML().replace('<p></p>', '<br/>');
+    this.setState({
+      editorState: BraftEditor.createEditorState(html),
+    })
+    console.log('html =>', this, html);
+  }
 
   logHTML = () => {
     console.log(this.state.editorState.toHTML());
@@ -64,25 +72,30 @@ class App extends React.Component {
 
   render() {
     // const { readOnly, editorState } = this.state;
-
     return (
       <div>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', padding: 16 }}>
+          <button onClick={() => {
+            this.save();
+          }}>保存到编辑器</button>
+        </div>
         <div className="demo" id="demo">
-          11111
           <BraftEditor
-            // value={BraftEditor.createEditorState('')}
-            // colors={['#e25041']}
-            // headings={['header-one', 'unstyled']}
-            // placeholder="Hello World!"
-            // fixPlaceholder
-            // allowInsertLinkText
-            // triggerChangeOnMount={false}
-            // value={editorState}
-            // onChange={this.handleChange}
-            // readOnly={readOnly}
-            // hooks={hooks}
-            // imageResizable
-            // imageEqualRatio
+            value={this.state.editorState}
+            onChange={this.handleChange}
+          // value={BraftEditor.createEditorState('')}
+          // colors={['#e25041']}
+          // headings={['header-one', 'unstyled']}
+          // placeholder="Hello World!"
+          // fixPlaceholder
+          // allowInsertLinkText
+          // triggerChangeOnMount={false}
+          // value={editorState}
+          // onChange={this.handleChange}
+          // readOnly={readOnly}
+          // hooks={hooks}
+          // imageResizable
+          // imageEqualRatio
           />
         </div>
       </div>
