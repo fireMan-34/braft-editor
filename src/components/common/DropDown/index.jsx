@@ -50,8 +50,8 @@ class DropDown extends React.Component {
 
   fixDropDownPosition = () => {
     const viewRect = this.props.getContainerNode().getBoundingClientRect();
-    const handlerRect = this.dropDownHandlerElement.getBoundingClientRect();
-    const contentRect = this.dropDownContentElement.getBoundingClientRect();
+    const handlerRect = this.dropDownHandlerElement.current.getBoundingClientRect();
+    const contentRect = this.dropDownContentElement.current.getBoundingClientRect();
 
     let offset = 0;
     let right =
