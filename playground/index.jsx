@@ -50,7 +50,7 @@ class App extends React.Component {
   }
 
   handleChange = (editorState) => {
-    console.log('change');
+    console.log('change', editorState.toHTML());
     this.setState({ editorState });
   };
 

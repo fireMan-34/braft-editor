@@ -64,7 +64,7 @@ class Modal extends React.Component {
     super(props);
     this.active = false;
     // eslint-disable-next-line new-cap
-    this.componentId = `BRAFT-MODAL-${BaseUtils.UniueIndex()}`;
+    this.componentId = `BRAFT-MODAL-${BaseUtils.UniqueIndex()}`;
   }
 
   componentDidMount() {
