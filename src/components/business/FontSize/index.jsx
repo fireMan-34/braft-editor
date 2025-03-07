@@ -65,7 +65,7 @@ const FontSize = (props) => {
               data-size={item}
               onClick={(event) => {
                 toggleFontSize(event, props);
-                dropDownInstance.hide();
+                dropDownInstance.current.hide();
               }}
             >
               {item}

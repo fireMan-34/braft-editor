@@ -133,6 +133,9 @@ EditorState.createFrom = (content, options = {}) => {
 
 BraftEditor.createEditorState = EditorState.createFrom;
 
+/**
+ * @type {import('../index').default}
+ */
 export default createExtensibleEditor(BraftEditor);
 export { EditorState, getDecorators };
 

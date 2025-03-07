@@ -59,7 +59,7 @@ class App extends React.Component {
     this.setState({
       editorState: BraftEditor.createEditorState(html),
     })
-    console.log('html =>', this, html);
+    console.log('html =>', html, this.state.editorState);
   }
 
   logHTML = () => {

@@ -69,7 +69,7 @@ const FontFamily = (props) => {
               data-name={item.name}
               onClick={(event) => {
                 toggleFontFamily(event, props);
-                dropDownInstance.hide();
+                dropDownInstance.current.hide();
               }}
             >
               <span style={{ fontFamily: item.family }}>{item.name}</span>

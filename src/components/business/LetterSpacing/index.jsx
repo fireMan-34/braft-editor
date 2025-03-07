@@ -68,7 +68,7 @@ const LetterSpacing = (props) => {
               data-size={item}
               onClick={(event) => {
                 toggleLetterSpacing(event, props);
-                dropDownInstance.hide();
+                dropDownInstance.current.hide();
               }}
             >
               {item}
