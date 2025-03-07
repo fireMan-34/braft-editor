@@ -271,9 +271,6 @@ class BraftEditor extends React.Component {
   }
 
   onChange = (editorState, callback) => {
-    // 解构后报错
-    // let newEditorState = { ...editorState };
-    // let newEditorState = EditorState.set(editorState, {});
     let newEditorState = editorState;
 
     if (!(editorState instanceof EditorState)) {

@@ -100,7 +100,7 @@ EditorState.createFrom = (content, options = {}) => {
       );
     }
   }
-  if (typeof content === 'number') {
+  else if (typeof content === 'number') {
     editorState = convertHTMLToEditorState(
       content.toLocaleString().replace(/,/g, ''),
       getDecorators(customOptions.editorId),

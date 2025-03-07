@@ -55,7 +55,8 @@ class App extends React.Component {
   };
 
   save() {
-    const html = this.state.editorState.toHTML().replace('<p></p>', '<br/>');
+    const html = this.state.editorState.toHTML().replaceAll(/<p><\/p>/g, '<br/>');
+
     this.setState({
       editorState: BraftEditor.createEditorState(html),
     })
@@ -78,6 +79,9 @@ class App extends React.Component {
           <button onClick={() => {
             this.save();
           }}>保存到编辑器</button>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          {this.state.editorState.toHTML()}
         </div>
         <div className="demo" id="demo">
           <BraftEditor
